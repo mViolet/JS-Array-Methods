@@ -35,8 +35,9 @@
 <li>the array that map was called on</li>
 <li>a value to use as <code>this</code> when calling the callback function</li>
 </ul>
-<p>Basic usage: <code>someArray.Map(el =&gt; //return statement)</code><br>
-Some examples:</p>
+<p>Basic usage:<br>
+<code>someArray.Map(el =&gt; //return statement)</code></p>
+<p>Some examples:</p>
 <pre><code>const arr = ['Apple', 'Peach', 'Orange']
 console.log(arr.map(el =&gt; el + '!'))
 // Prints [ "Apple!", "Peach!", "Orange!" ]
@@ -53,27 +54,220 @@ console.log(arr.map((el, i) =&gt; {
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="reduce">Reduce</h2>
+<p>Array.prototype.Map() returns a new array, with each element of that array modified based on a function that you pass into it.</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>asdasd</li>
+<li>asda</li>
+<li>asd</li>
+<li>asda</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Reduce((acc, curr) =&gt; acc + curr, 0)</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="filter">Filter</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="foreach">forEach</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="sort">Sort</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="slice">Slice</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="pop">Pop</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="shift">Shift</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="push">Push</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="unshift">Unshift</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="includes">Includes</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="indexof">IndexOf</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="every">Every</h2>
+<p>Array.prototype.Method() does xyz…</p>
+<p>Parameters accepted:</p>
+<ul>
+<li>thing</li>
+<li>thing</li>
+<li>thing</li>
+</ul>
+<p>Basic usage:<br>
+<code>someArray.Method()</code></p>
+<p>Some examples:</p>
+<pre><code>some code
+</code></pre>
+<pre><code>some code
+</code></pre>
+<pre><code>// some code
+</code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 
