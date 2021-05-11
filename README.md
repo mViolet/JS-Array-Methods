@@ -303,7 +303,8 @@ arr.filter((el, i) =&gt; i % 2 === 0)
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="section"></h2>
-<p><strong>That’s it!</strong><br>
-Thanks for taking the time to check out this reference on Array Methods.</p>
+<p><strong>That’s it!</strong></p>
+<p>Thanks for taking the time to check out my little reference manual on Array Methods.<br>
+Go forth and use the aforementioned methods to your heart’s content ✨</p>
 <p>The ultimate reference for JavaScript features can be found at the <a href="https://developer.mozilla.org/en-US/">MDN WebDocs</a></p>
 
