@@ -27,7 +27,7 @@
 <a href="#indexof">IndexOf</a><br>
 <a href="#every">Every</a></p>
 <h2 id="map">Map</h2>
-<p>Array.Map() returns a new array, with each element of that array modified based on a function that you pass into it.</p>
+<p>Array.prototype.Map() returns a new array, with each element of that array modified based on a function that you pass into it.</p>
 <p>Parameters accepted: a function which can accept the following elements as parameters:</p>
 <ul>
 <li>the current element of the array (required)</li>
