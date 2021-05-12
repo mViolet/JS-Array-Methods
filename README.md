@@ -160,21 +160,49 @@ Alan!
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="sort">Sort</h2>
-<p>Array.prototype.Method() does xyz…</p>
-<p><em><strong>Parameters accepted:</strong></em></p>
+<p>Array.prototype.sort() sorts an array as strings by default, with smaller values first. It determines which one is smaller by checking the Unicode code point values.<br>
+.sort() sorts items “in place”, which means that the original array is changed.</p>
+<p><em><strong>Time complexity:</strong></em>    <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mrow></mrow><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log{}n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span style="margin-right: 0.02778em;" class="mord mathnormal">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">lo<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span><br>
+This can vary depending on what JS engine (or browser) is being used, and how many elements are in the array.</p>
+<p><em><strong>Parameters accepted:</strong></em><br>
+The way sort works is it compares as strings by default, but you can pass a <em>compare function</em> to it. If a compare function is used, the items will be sorted by the return value of the compare function.<br>
+The compare function can take in two values:</p>
 <ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
+<li>the first element</li>
+<li>the next element</li>
 </ul>
-<p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<p><em><strong>Basic usage:</strong></em></p>
+<pre><code>someArray.sort((a, b) =&gt; compareFunc}
+
+compareFunc(a, b){
+    if (a &lt; b) return -1
+    if (a &gt; b) return 1
+    return 0
+}
+</code></pre>
+<p>or<br>
+<code>someArray.sort((a, b) =&gt; a - b)</code></p>
 <p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
+<pre><code>const names = ['Isabelle', 'Chevre', 'Aurora', 'Tom', 'Blathers', 'Brewster'] names.sort()
+
+//returns:
+[ "Aurora", "Blathers", "Brewster", "Chevre", "Isabelle", "Tom" ]
 </code></pre>
-<pre><code>some code
+<pre><code>const nums = [17,38,3,14,5,21,22,4]
+
+console.log(nums.sort())
+//prints:
+[ 14, 17, 21, 22, 3, 38, 4, 5 ]
+
+console.log(nums.sort((a,b) =&gt; a - b))  
+//prints:
+[ 3, 4, 5, 14, 17, 21, 22, 38 ]
 </code></pre>
-<pre><code>// some code
+<pre><code>const nums = [32,56,43,57,12,34]
+nums.sort((a,b) =&gt; b - a)  
+
+//returns:
+ [ 57, 56, 43, 34, 32, 12 ]
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="slice">Slice</h2>
