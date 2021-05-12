@@ -131,13 +131,32 @@ arr.filter((el, i) =&gt; i % 2 === 0)
 </ul>
 <p>In addition to the callback function, it can also take in a value to use as <code>this</code> when the function is called</p>
 <p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<code>someArray.forEach(el =&gt; callbackFunction)</code></p>
 <p>Some examples:</p>
-<pre><code>some code
+<pre><code>const arr = ['Alan', 'Al', 'Alan', 'Allen', 'Alan'] const newArr = arr.forEach(el =&gt; console.log(el.concat('!')))  
+
+//will print the following to the console:
+Alan!
+Al!
+Alan! 
+Allen!
+Alan!
 </code></pre>
-<pre><code>some code
+<pre><code>const arr = ["chocolate chip cookie", "dried fruit", "candy", "sugar cookie", "bagel", "peanut butter cookie", "peanuts"] const cookies = [] const otherSnacks = [] arr.forEach(el =&gt; (el.includes('cookie')) ? cookies.push(el) : otherSnacks.push(el)) console.log(cookies, otherSnacks)  
+
+// prints cookies array and otherSnacks array:
+[ "chocolate chip cookie", "sugar cookie", "peanut butter cookie" ]
+[ "dried fruit", "candy", "bagel", "peanuts" ]
 </code></pre>
-<pre><code>// some code
+<pre><code>const arr = [12, 13, 15, 62, 67, 48] arr.forEach(el =&gt; { console.log(`${el} is${(el % 4 === 0) ? "" : " not"} a multiple of 4.`) })  
+
+// prints the following:
+12 is a multiple of 4.
+13 is not a multiple of 4.
+15 is not a multiple of 4.
+62 is not a multiple of 4.
+67 is not a multiple of 4.
+48 is a multiple of 4.
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="sort">Sort</h2>
