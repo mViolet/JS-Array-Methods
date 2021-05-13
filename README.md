@@ -206,25 +206,49 @@ nums.sort((a,b) =&gt; b - a)
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="slice">Slice</h2>
-<p>Array.prototype.Method() does xyz…</p>
-<p><em><strong>Parameters accepted:</strong></em></p>
+<p>Array.prototype.slice() extracts part of an array and then returns it. It does not affect the original array… however, if the the items in the arrays are objects, the new array will be references to those objects. This means that if you try to alter an object in the new array, the original objects will be affected as well.</p>
+<p><em><strong>Parameters accepted:</strong></em><br>
+.slice() can take two parameters:</p>
 <ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
+<li>start</li>
+<li>end</li>
 </ul>
+<p><code>start</code> indicates at which index the slice will begin, and <code>end</code> indicates the index where the slice ends. <code>start</code> will be included in the returned array, and the value at <code>end</code> will not.</p>
+<p>You can use a negative number for <code>start</code>, which will cause .slice() to count from the end of the array.<br>
+If <code>start</code> is too large for the array, and empty array will be what comes back.</p>
+<p>The value passed in as <code>end</code> works much like <code>start</code>, except that if it’s too large for the array, it will just count through the end of the array</p>
 <p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<code>someArray.slice(start, end)</code></p>
 <p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
+<pre><code>const arr = [ 1, 2, 3, 4, 5, 6, 9]
+arr.slice()
+
+//returns [ 1, 2, 3, 4, 5, 6, 9 ]
 </code></pre>
-<pre><code>some code
+<pre><code>const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+arr.slice(-3)
+
+//returns: [ "e", "f", "g" ]
 </code></pre>
-<pre><code>// some code
+<pre><code>const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+arr.slice(2, 100)
+
+//returns: [ "c", "d", "e", "f", "g" ]
+</code></pre>
+<pre><code>const arr = [{name: "bob", rank: 10},{name: "helen", rank: 11},{name: "ariel", rank: 9}]  
+const slicedArr = arr.slice(0, 2)  
+slicedArr[0].rank = 22
+console.log(arr[0], slicedArr[0])
+
+//prints:
+{ name: "bob", rank: 22 }
+{ name: "bob", rank: 22 }
+
+
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="pop">Pop</h2>
-<p>Array.prototype.Method() does xyz…</p>
+<p>Array.prototype.pop() does xyz…</p>
 <p><em><strong>Parameters accepted:</strong></em></p>
 <ul>
 <li>thing</li>
