@@ -208,7 +208,7 @@ nums.sort((a,b) =&gt; b - a)
 <h2 id="slice">Slice</h2>
 <p>Array.prototype.slice() extracts part of an array and then returns it.<br>
 It’s kind of like a slice of an array!</p>
-<p>It does not affect the original array… however, if the the items in the arrays are objects, the new array will be references to those objects. This means that if you try to alter an object in the new array, the original objects will be affected as well.</p>
+<p>It does not affect the original array… however, if the the items in the arrays are objects, the new array will reference those objects. This means that if you try to alter an object in the new array, the original objects will be affected as well.</p>
 <p><em><strong>Parameters accepted:</strong></em><br>
 .slice() can take two parameters:</p>
 <ul>
@@ -250,7 +250,7 @@ console.log(arr[0], slicedArr[0])
 <h2 id="pop">Pop</h2>
 <p>Array.prototype.pop() “pops” an element off of the end of an array, and returns it. It returns <code>undefined</code> if it’s called on an empty array.</p>
 <p>It affects the original array!</p>
-<p>You can use .pop() on array-like objects by using .call(arrayLikeObj)!<br>
+<p>You can use .pop() on array-like objects by using .call(arrayLikeObj).<br>
 See the last example.</p>
 <p><em><strong>Parameters accepted:</strong></em><br>
 none!</p>
@@ -279,19 +279,29 @@ console.log(things, poppedThing)
 //prints: 
 { 0: "thing1", 1: "thing2", length: 2 }
 thing3
+`
+</code></pre>
+<p>Here’s something really cool you can do with this method. You can use it in a loop like this:</p>
+<pre><code>const arr = [1,2,3,4,5]
+while (typeof (i = arr.pop()) !== undefined) {
+    console.log(i)
+}
+
+//prints:
+5
+4
+3
+2
+1
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="shift">Shift</h2>
 <p>Array.prototype.shift() behaves just like <a href="#pop">.pop()</a>, except it works on the beginning, or front of the array.<br>
 It affects the original array.</p>
-<p><em><strong>Parameters accepted:</strong></em></p>
-<ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
-</ul>
+<p><em><strong>Parameters accepted:</strong></em><br>
+none!</p>
 <p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<code>someArray.shift()</code></p>
 <p><em><strong>Some examples:</strong></em></p>
 <pre><code>some code
 </code></pre>
