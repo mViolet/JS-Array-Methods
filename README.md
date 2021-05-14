@@ -395,55 +395,106 @@ length: 5
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="includes">Includes</h2>
-<p>Array.prototype.Method() does xyz…</p>
+<p>Array.prototype.includes() checks to see if a value passed into it exists in an array.<br>
+It returns <code>true</code> if it is found, and <code>false</code> if not.</p>
 <p><em><strong>Parameters accepted:</strong></em></p>
 <ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
+<li>element to search for (required)</li>
+<li>index to start the search from</li>
 </ul>
 <p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<code>someArray.Method(el, index)</code></p>
 <p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
+<pre><code>const arr = [1, 2, 3, 4, 5]
+console.log(arr.includes(2)) //true
+console.log(arr.includes(0)) //false
 </code></pre>
-<pre><code>some code
+<pre><code>const words = ['well', 'hello', 'there']
+console.log(words.includes('hello')) //true
+console.log(words.includes('the')) //false
 </code></pre>
-<pre><code>// some code
+<pre><code>const arr = ['a', 'b', 'c', 'd', 'e']
+arr.includes('b', 0)  //true
+arr.includes('b', 2)  //false  
+arr.includes('b', -3)  //false  
+arr.includes('b', -4)  //true - starts search at 4 from end
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="indexof">IndexOf</h2>
-<p>Array.prototype.Method() does xyz…</p>
+<p>Array.prototype.indexOf() searches an Array for an element, and returns the index number of where that item is located.<br>
+If it’s not found, -1 will be returned.</p>
+<p>The element that is being searched for has to match in <em>both</em> value and type for a match to happen. (i.e., ‘3’ and 3 will not match.)</p>
+<!--***Time complexity:***&#10;.includes() stops when the item is found, and will execute once for each element in the array.&#10;This means its time complexity is in this range:&#10;$O(1)$ to $O(n)$&#10;This is just a guess so I have commented this out!-->
 <p><em><strong>Parameters accepted:</strong></em></p>
 <ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
+<li>the element to find in the array (required)</li>
+<li>index where the search will start</li>
 </ul>
 <p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<code>someArray.indexOf(el, index)</code></p>
 <p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
+<pre><code>const animals = ['zebra', 'buffalo', 'nuthatch', 'puma']  
+animals.indexOf()  // -1  
+animals.indexOf('nuthatch')  // 2  
+animals.indexOf('Puma')  // -1
 </code></pre>
-<pre><code>some code
+<pre><code>const nums = [1, 2, 3, 4, 6]
+const n = await nums.indexOf(5)
+if (n === -1) {
+    return 'not found'
+} else {
+    return `found at index: ${n}`
+}
+// returns: "not found"
 </code></pre>
-<pre><code>// some code
+<pre><code>const nums = [1, 2, 3, 4, 6]
+
+function addNum(n, arr){
+  arr.push(n)
+  arr.sort()
+}
+
+function isInArray(n, arr){
+  if (arr.indexOf(n) == -1) {
+    console.log(n + " is not in the array")
+    addNum(n, arr)
+  } else {
+    console.log(n + " is already in the array")
+  }
+}
+
+isInArray(5, nums) //prints: "5 is not in the array" 
+console.log(nums) //prints: [ 1, 2, 3, 4, 5, 6 ]
+
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="every">Every</h2>
-<p>Array.prototype.Method() does xyz…</p>
-<p><em><strong>Parameters accepted:</strong></em></p>
+<p>Array.prototype.every() checks to see if every item passes a test that is given by a function.<br>
+If every element in the array has a ‘truthy’ value, .every() will return <code>true</code>. Otherwise it’ll return <code>false</code>.</p>
+<p><em><strong>Parameters accepted:</strong></em><br>
+.every() takes in a callback function, which itself can take three arguments:</p>
 <ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
+<li>the current element (required)</li>
+<li>the index of the current element</li>
+<li>the original array that .every() was called on</li>
 </ul>
+<p>In addition to the callback function, it can also take in a value to use as <code>this</code> when the function is called.</p>
 <p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<code>someArray.every((el, index) =&gt; callbackFunc)</code></p>
 <p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
+<pre><code>const arr = [5, 4, 7, 29, 90]
+arr.every(el =&gt; el &gt; 0)  //returns: true
+arr.every(el =&gt; el &gt; 5)  //returns: false
 </code></pre>
-<pre><code>some code
+<pre><code>const duckDuckGoose = ['duck', 'duck', 'goose']
+const duckDuckDuck = ['duck', 'duck', 'duck']
+
+function isDuck(str){
+    return str === 'duck'
+}
+
+console.log(duckDuckGoose.every(isDuck)) //prints: false 
+console.log(duckDuckDuck.every(isDuck))  //prints: true
 </code></pre>
 <pre><code>// some code
 </code></pre>
