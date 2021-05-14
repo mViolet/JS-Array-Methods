@@ -496,7 +496,15 @@ function isDuck(str){
 console.log(duckDuckGoose.every(isDuck)) //prints: false 
 console.log(duckDuckDuck.every(isDuck))  //prints: true
 </code></pre>
-<pre><code>// some code
+<pre><code>const nums = [[1, 2, 16], [0, 101, 2], [99, 78, 34]]
+nums.forEach(arr =&gt; {
+    console.log(`${JSON.stringify(arr)}... are all nums less than 100? `+ arr.every(el =&gt; el &lt; 100))
+})  
+
+//prints:
+[1,2,16]... are all nums less than 100? true 
+[0,101,2]... are all nums less than 100? false 
+[99,78,34]... are all nums less than 100? true
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="section"></h2>
