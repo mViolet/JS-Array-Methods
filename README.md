@@ -21,8 +21,8 @@
 <a href="#slice">Slice</a><br>
 <a href="#pop">Pop</a><br>
 <a href="#shift">Shift</a><br>
-<a href="#push">Push</a><br>
 <a href="#unshift">Unshift</a><br>
+<a href="#push">Push</a><br>
 <a href="#includes">Includes</a><br>
 <a href="#indexof">IndexOf</a><br>
 <a href="#every">Every</a></p>
@@ -162,7 +162,7 @@ Alan!
 <h2 id="sort">Sort</h2>
 <p>Array.prototype.sort() sorts an array as strings by default, with smaller values first. It determines which one is smaller by checking the Unicode code point values.<br>
 .sort() sorts items “in place”, which means that the original array is changed.</p>
-<p><em><strong>Time complexity:</strong></em>    <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mrow></mrow><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log{}n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span style="margin-right: 0.02778em;" class="mord mathnormal">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">lo<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span><br>
+<p><em><strong>Time complexity:</strong></em>    <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>∗</mo><mi>log</mi><mo>⁡</mo><mrow></mrow><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n *\log{}n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span style="margin-right: 0.02778em;" class="mord mathnormal">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mop">lo<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span><br>
 This can vary depending on what JS engine (or browser) is being used, and how many elements are in the array.</p>
 <p><em><strong>Parameters accepted:</strong></em><br>
 The way sort works is it compares as strings by default, but you can pass a <em>compare function</em> to it. If a compare function is used, the items will be sorted by the return value of the compare function.<br>
@@ -283,7 +283,7 @@ thing3
 </code></pre>
 <p>Here’s something really cool you can do with this method. You can use it in a loop like this:</p>
 <pre><code>const arr = [1,2,3,4,5]
-while (typeof (i = arr.pop()) !== undefined) {
+while (typeof (i = arr.pop()) !== 'undefined') {
     console.log(i)
 }
 
@@ -303,47 +303,95 @@ none!</p>
 <p><em><strong>Basic usage:</strong></em><br>
 <code>someArray.shift()</code></p>
 <p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
+<pre><code>const arr = ['pink', 'purple', 'blue', 'grey'] arr.shift()  
+//returns: "pink"
+console.log(arr)
+//prints: [ "purple", "blue", "grey" ]
 </code></pre>
-<pre><code>some code
+<pre><code>
 </code></pre>
-<pre><code>// some code
-</code></pre>
-<p><a href="#list-of-array-methods">Back to the list</a></p>
-<h2 id="push">Push</h2>
-<p>Array.prototype.Method() does xyz…</p>
-<p><em><strong>Parameters accepted:</strong></em></p>
-<ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
-</ul>
-<p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
-<p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
-</code></pre>
-<pre><code>some code
-</code></pre>
-<pre><code>// some code
+<pre><code>const arr = ['bread', 'nacho cheese', 'lettuce', 'macaroni']
+while ((i = arr.shift()) !== undefined) {
+    console.log(i)
+}
+
+//prints: 
+bread
+nacho cheese
+lettuce
+macaroni
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="unshift">Unshift</h2>
-<p>Array.prototype.Method() does xyz…</p>
+<p>Array.prototype.unshift() is kind of like the opposite of .shift() - instead of removing an item from the beginning, or the front of an array, it adds an item (or more).<br>
+It modifies the original array, and its return value is the new length of the array.</p>
 <p><em><strong>Parameters accepted:</strong></em></p>
 <ul>
-<li>thing</li>
-<li>thing</li>
-<li>thing</li>
+<li>the element to add to the array</li>
 </ul>
 <p><em><strong>Basic usage:</strong></em><br>
-<code>someArray.Method()</code></p>
+<code>someArray.unshift(newElement)</code></p>
 <p><em><strong>Some examples:</strong></em></p>
-<pre><code>some code
+<pre><code>const dinosaurs = ['stegosaurus', 'triceratops', 'diplodocus'] 
+dinosaurs.unshift('ankylosaurus')  
+// returns: 4  
+
+console.log(dinosaurs)
+//prints: [ "ankylosaurus", "stegosaurus", "triceratops", "diplodocus" ]
 </code></pre>
-<pre><code>some code
+<pre><code>const weekdays = ['thu', 'fri', 'sat']
+weekdays.unshift('mon', 'tue', 'wed')  
+//returns: 6  
+
+console.log(weekdays)
+//prints:  [ "mon", "tue", "wed", "thu", "fri", "sat" ]
 </code></pre>
-<pre><code>// some code
+<pre><code>const outOfOrder = ['thu', 'fri', 'sat']
+outOfOrder.unshift('mon') //returns 4
+outOfOrder.unshift('tue') //returns 5
+outOfOrder.unshift('wed') //returns 6
+
+console.log(outOfOrder)
+//prints: [ "wed", "tue", "mon", "thu", "fri", "sat" ]
+</code></pre>
+<p><a href="#list-of-array-methods">Back to the list</a></p>
+<h2 id="push">Push</h2>
+<p>Array.prototype.push() is similar to <a href="#shift">.shift()</a>, except it adds one or more items to the end of an array.<br>
+It changes the original array, and the return value is the new length of the array.</p>
+<p><em><strong>Parameters accepted:</strong></em></p>
+<ul>
+<li>the element to add to the array</li>
+</ul>
+<p><em><strong>Basic usage:</strong></em><br>
+<code>someArray.push(newElement)</code></p>
+<p><em><strong>Some examples:</strong></em></p>
+<pre><code>const names = ['aria', 'pokey', 'mitsy'] names.push('oreo')  
+//returns: 4  
+
+console.log(names)
+prints: [ "aria", "pokey", "mitsy", "oreo" ]
+</code></pre>
+<pre><code>const fish = ['bass', 'char', 'salmon']
+fish.push('angelfish', 'parrotfish', 'sturgeon')  
+//returns: 6  
+
+console.log(fish)  
+//prints: [ "bass", "char", "salmon", "angelfish", "parrotfish", "sturgeon" ]
+</code></pre>
+<pre><code>const inventory = [{0: 'chamomile', qty: 6}, {1: 'hibiscus', qty: 2}, {2: 'peppermint', qty: 10}]
+inventory.push({3: 'rooibos', qty: 10}, {4: 'linden', qty: 10})  
+
+//returns: 5  
+
+console.log(inventory)  
+//prints the following:
+// an Array, [ {…}, {…}, {…}, {…}, {…} ] containing...
+0: Object { 0: "chamomile", qty: 6 }
+1: Object { 1: "hibiscus", qty: 2 }
+2: Object { 2: "peppermint", qty: 10 }
+3: Object { 3: "rooibos", qty: 10 }
+4: Object { 4: "linden", qty: 10 }
+length: 5
 </code></pre>
 <p><a href="#list-of-array-methods">Back to the list</a></p>
 <h2 id="includes">Includes</h2>
